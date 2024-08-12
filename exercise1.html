@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR Tool Exercises</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #333;
+        }
+        h3 {
+            color: #333;
+        }
+        h4 {
+            color: #333;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+     	img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Exercise 1: Recovering the Hyades </h1>
+    <h3>Background</h4>
+	<p> Open clusters are star clusters composed of dozens to perhaps a few thousand stars that formed at roughly the same time from the same giant molecular cloud. Unlike globular clusters, they are <em>loosely</em> bound, and may ultimately experience tidal disruption and become dispersed as they orbit the milky way. <a href = "https://www.aanda.org/articles/aa/abs/2024/07/aa48220-23/aa48220-23.html"> Studies</a> imply that for the bulk of open clusters, this dispersion happens within 1 Gyr.</p>
+	
+	<p> The nearest moderately-rich open cluster to the solar system is known as <b>the Hyades</b>, and sits at around 47 parsecs (~150 ly) away. The Hyades, being as close as it is, can be seen with the naked eye. From our location in Rochester, NY it is visible for much of the winter, making up the head of the bull for the constellarion Taurus. As you may notice in the image below, it is located close to another naked eye open cluster, the Pleiades. 
+<a href="taurus_stellarium.png" target="_blank">
+    <img src="taurus_stellarium.png" alt="Planetarium application view of the hyades position" width="40%">
+</a>
+<p> It will not matter much for the following exercise, but in traditional 2-D coordinate frames the Hyades is located at a right-ascension of around 4h27m and a declination of +15&#176;55'.</p>
+<hr>
+<h3>Task</h3>
+<p>In this exercise, you will use StarGateVR to identify the Hyades in 3-dimensional space and recover member stars (or at least, what look like member stars), based soley on position.</p>
+<h4>Locate the Hyades in 3D</h4>
+<p> The first step is uploading an appropriate dataset to your headset. We will later discuss how to create these datasets, but for now you'll use the dataset linked below. The .csv file which should download contains all astrometrically-well behaved Gaia DR3 stars in a radius of 75 parsecs from the sun.</p>
+
+<a href="exercise1.csv" download="exercise1.csv">Download Dataset</a>
+
+<p> If you don't remember how to upload the dataset to the headset (or just need a refresher), please revisit the <a href="intro.html">Introduction to StarGateVR</a> page.</p>
+
+<p> Once you've got the data loaded onto the headset, go ahead and open it up in StarGateVR. Take some time to familiarize yourself with what you're seeing in positional (XYZ) space. </p>
+<p> As soon as you feel comfortable, try and find the Hyades in XYZ space. It is the only open moderately rich open cluster within that distance, so should appear as the only 3-dimensional overdensity. If you are having trouble locating it, first try using the point brightness and scale sliders to adjust your view. If that fails. you can grab the gate and use the coordinates visible on it to identify roughly the correct position.</p>
+<details>
+  <summary>Hyades XYZ position</summary>
+  As given in table 9 of <a href="intro.html">Gagné et al. (2018a; ApJ, 856, 23)</a>: X = -38.5, Y = 0.8, Z = -15.8
+</details>
+<p> Even if you located the Hyades without using the methods listed above, it is still a good idea to double check that you're in the area of the above coordinates using the gating tool.</p>
+<h4>Gating the Hyades</h4>
+<p>Once you're satisfied you've located the Hyades, place the gating tool in the approximate center. You can then use the 3 sliders to alter the ellipsoidal shape of the gate to best fit the physical shape of the Hyades open cluster. Make sure you set the gate once you're satisfied you've gotten most of the Hyades members within it.<p>
+<p>To make the following analysis easier, it is <em>highly</em> recommended at this point that you "turn off" all stars not in the gate. Please reference the introductory webpage if you are unsure of how to do this.</p>
+
+
+</body>
+</html>
