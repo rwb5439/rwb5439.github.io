@@ -1,0 +1,1 @@
+Gaia absolute G for your temperature proxy and Gaia Bp-Rp or G-Rp for your mass proxy.
