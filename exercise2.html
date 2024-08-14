@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2</title>
+    <style>
+        body {
+            font-family: CMU Serif, serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #333;
+        }
+        h3 {
+            color: #333;
+        }
+        h4 {
+            color: #333;
+        }
+        }
+        h5 {
+            color: #333;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+     	img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Exercise 2: Recovering the Hyades via kinematics</h1>
+    <h3>Background</h3>
+<p>
+You saw in the last exercise how to isolate an open cluster based on position, but we also saw that methodology lead to some interlopers in the data. These are stars that did not form with the rest of the open cluster, which, by movement and happenstance currently occupy the same region of space as it does. 
+</p>
+<p>
+Fortunately, there are other ways we can isolate the cluster which may help with that issue. In this installment, we'll look at one such method - selecting the cluster based on 3-D kinematics. For much of history, it was difficult enough to meaure the 2-D "proper" motion of stars on the celestial sphere, because they are far away their position changes <em>very</em> little on human scales. The Gaia mission has done an admirable job measuring this for many, many stars, and additionally, the onboard spectrometer allows for radial velocity measurements of a sizeable fraction of observed stars. This means that for many stars, there is a full 3-D picture of their linear motion. 
+</p>
+<p>
+The good news for us is that stars that form together (like an open-cluster such as the Hyades) <em>should</em> share a common 3-D motion, since not enough time has elapsed for their velocities to have been "mixed" with the field population. 
+</p>
+<p>
+Here, we are going to use StarGateVR to isolate the Hyades in heliocentric velocity space. Much like the XYZ parameter space you saw in the last exercise, this UVW space places each component of the stars velocity on an axis, with the sun's velocity at 0,0,0. For example, if a star is moving 17 km/s in the x-direction (towards the galactic center from the sun's line of sight), it will have a position of +17 on the U axis. In this way, a point in UVW space is essentially a representation of a stars 3-D velocity vector. 
+</p>
+<p>
+Note, importantly, that because radial velocity is a tough measurement to make, especially for faint sources, that not all stars have one measured. Thankfully, the Hyades is close to the sun which helps, but note that many members will not be picked up with this method since StarGateVR won't display sources in UVW space which don't have radial velocity. For now this is okay, but if you end up using StarGateVR or Gaia data for your own projects you may want to think about the ramifications of this bias. 
+<hr>
+<h3>Task</h3>
+<p>
+In this exercise, you will essentially repreat what was done in exercise 1 in the UVW coordinate space. To begin, please download the dataset below:
+</p>
+<a href="exercise1.csv" download="exercise2.csv">Download Dataset</a>
+<p>
+Much like the last dataset, this contains all astrometrically well-behaved stars within 75pc of the sun. This time, I have also included the 2-D proper motion information(pmra & pmdec) as well as the radial velocity. With those 3 values for each star, StarGateVR can do a coordinate transformation to display everything in heliocentric UVW space.
+</p>
+</body>
